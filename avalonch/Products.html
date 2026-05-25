@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AVALONCH — Products</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png" />
+<meta name="theme-color" content="#000000" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css?v=31" />
+<link rel="stylesheet" href="assets/products.css?v=9" />
+<link rel="stylesheet" href="assets/valley.css?v=16" />
+<link rel="stylesheet" href="assets/enhancements.css?v=1" />
+<link rel="stylesheet" href="assets/gallery.css?v=1" />
+</head>
+<body>
+
+<!-- ================== NAV ================== -->
+<nav class="nav" data-screen-label="Nav">
+  <a href="index.html" class="logo">
+    <img src="assets/avalonch-logo-tight.png" alt="AVALONCH" />
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="Products.html" class="active">Products</a>
+    <a href="Contact.html">Contact</a>
+  </div>
+</nav>
+
+
+
+<!-- ================== SPLIT TABS ================== -->
+<section class="split-page" data-screen-label="01 Split">
+  <div class="split-wrap">
+    <div class="split-tabs" role="tablist">
+      <button class="split-tab active" data-target="hardware" role="tab" aria-selected="true">
+        <div class="st-num">01</div>
+        <div class="st-label">Hardware</div>
+      </button>
+      <button class="split-tab" data-target="software" role="tab" aria-selected="false">
+        <div class="st-num">02</div>
+        <div class="st-label">Software</div>
+      </button>
+      <button class="split-tab" data-target="roadmap" role="tab" aria-selected="false">
+        <div class="st-num">03</div>
+        <div class="st-label">Future Roadmap</div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================== HARDWARE / ANKOSHA ================== -->
+<div id="hardware-pane" class="split-pane active">
+<section class="ank-page" data-screen-label="02 Platform">
+  <div class="ank-wrap">
+
+    <div class="ank-hero">
+      <h1>Ankosha <span class="ital">UAV</span><br/>Platform.</h1>
+      <p class="lede">A high-altitude autonomous persistence system built for surveillance, target acquisition, and precision strike — across two purpose-built variants from a single airframe lineage.</p>
+
+      <div class="hero-stats" hidden></div>
+    </div>
+
+    <!-- ============ VARIANTS ============ -->
+    <div class="variants">
+      <!-- ANKOSHA A -->
+      <div class="variant">
+        <div class="v-head">
+          <div class="v-num">SYS · A</div>
+        </div>
+        <h3>Ankosha A.<br/><span class="ital">Piston Variant</span></h3>
+
+        <div class="spec">
+          <div class="row"><span class="k">Mission Tempo</span><span class="v">Sustained Persistence</span></div>
+          <div class="row"><span class="k">Primary Role</span><span class="v">Long-Endurance Intelligence, Surveillance &amp; Reconnaissance</span></div>
+        </div>
+      </div>
+
+      <!-- ANKOSHA B -->
+      <div class="variant">
+        <div class="v-head">
+          <div class="v-num">SYS · B</div>
+        </div>
+        <h3>Ankosha B.<br/><span class="ital">Turbojet Variant</span></h3>
+
+        <div class="spec">
+          <div class="row"><span class="k">Mission Tempo</span><span class="v">Rapid Deployment</span></div>
+          <div class="row"><span class="k">Primary Role</span><span class="v">Precision Strike</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ GALLERY ============ -->
+    <div class="ank-gallery-trigger">
+      <button type="button" class="btn-gallery" id="open-gallery" aria-expanded="false" aria-controls="ank-gallery">
+        <span class="btn-gallery-label">Gallery</span>
+        <svg class="btn-gallery-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <rect x="2" y="3" width="12" height="10" rx="0.5"/>
+          <circle cx="6" cy="7" r="1.2"/>
+          <path d="M3 13l4-4 3 3 2-2 3 3"/>
+        </svg>
+        <svg class="btn-gallery-chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M3 4.5l3 3 3-3"/>
+        </svg>
+      </button>
+      <span class="btn-gallery-meta">05 RENDERS · ANKOSHA PLATFORM</span>
+    </div>
+
+    <div class="ank-gallery" id="ank-gallery" hidden>
+      <div class="ank-gallery-head">
+        <span class="agh-eyebrow"><span class="agh-dot"></span>ANKOSHA · GALLERY</span>
+        <span class="agh-meta">05 VIEWS</span>
+      </div>
+      <div class="ank-gallery-grid">
+        <figure class="ank-shot">
+          <span class="ank-corner tl"></span><span class="ank-corner tr"></span>
+          <span class="ank-corner bl"></span><span class="ank-corner br"></span>
+          <span class="ank-shot-id">01</span>
+          <span class="ank-shot-label">TOP · 3Q</span>
+          <img src="assets/gallery/ankosha-01-top-3q.png" alt="Ankosha top three-quarter view" loading="lazy" />
+        </figure>
+        <figure class="ank-shot">
+          <span class="ank-corner tl"></span><span class="ank-corner tr"></span>
+          <span class="ank-corner bl"></span><span class="ank-corner br"></span>
+          <span class="ank-shot-id">02</span>
+          <span class="ank-shot-label">FRONT · 3Q</span>
+          <img src="assets/gallery/ankosha-02-front-3q.png" alt="Ankosha front three-quarter view" loading="lazy" />
+        </figure>
+        <figure class="ank-shot">
+          <span class="ank-corner tl"></span><span class="ank-corner tr"></span>
+          <span class="ank-corner bl"></span><span class="ank-corner br"></span>
+          <span class="ank-shot-id">03</span>
+          <span class="ank-shot-label">BACK · 3Q</span>
+          <img src="assets/gallery/ankosha-03-back-3q.png" alt="Ankosha back three-quarter view" loading="lazy" />
+        </figure>
+        <figure class="ank-shot">
+          <span class="ank-corner tl"></span><span class="ank-corner tr"></span>
+          <span class="ank-corner bl"></span><span class="ank-corner br"></span>
+          <span class="ank-shot-id">04</span>
+          <span class="ank-shot-label">UNDERSIDE</span>
+          <img src="assets/gallery/ankosha-05-bottom.png" alt="Ankosha underside view" loading="lazy" />
+        </figure>
+        <figure class="ank-shot ank-shot-wide">
+          <span class="ank-corner tl"></span><span class="ank-corner tr"></span>
+          <span class="ank-corner bl"></span><span class="ank-corner br"></span>
+          <span class="ank-shot-id">05</span>
+          <span class="ank-shot-label">SIDE PROFILE</span>
+          <img src="assets/gallery/ankosha-04-side.png" alt="Ankosha side profile" loading="lazy" />
+        </figure>
+      </div>
+    </div>
+
+    <!-- ============ DEMO ============ -->
+    <div class="ank-gallery-trigger ank-demo-trigger">
+      <button type="button" class="btn-gallery" id="open-demo" aria-expanded="false" aria-controls="ank-demo">
+        <span class="btn-gallery-label">Demo</span>
+        <svg class="btn-gallery-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <polygon points="5,3 5,13 13,8" fill="currentColor" stroke="none"/>
+        </svg>
+        <svg class="btn-gallery-chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M3 4.5l3 3 3-3"/>
+        </svg>
+      </button>
+      <span class="btn-gallery-meta">FLIGHT FOOTAGE · 02:07</span>
+    </div>
+
+    <div class="ank-demo" id="ank-demo" hidden>
+      <div class="ank-gallery-head">
+        <span class="agh-eyebrow"><span class="agh-dot"></span>ANKOSHA · DEMO</span>
+        <span class="agh-meta">FLIGHT TEST</span>
+      </div>
+      <div class="ank-demo-stage">
+        <span class="ank-corner tl"></span><span class="ank-corner tr"></span>
+        <span class="ank-corner bl"></span><span class="ank-corner br"></span>
+        <span class="ank-demo-overlay tl">REC</span>
+        <span class="ank-demo-overlay tr">AVALONCH · CONFIDENTIAL</span>
+        <video class="ank-demo-video"
+               src="assets/video/ankosha-demo.mp4"
+               playsinline
+               preload="metadata"
+               controls
+               muted>
+          <p class="ank-demo-fallback">
+            Video unavailable. Make sure <code>assets/video/ankosha-demo.mp4</code> is hosted alongside this page.
+          </p>
+        </video>
+      </div>
+    </div>
+
+    <!-- ============ COMPONENTS ============ -->
+
+  </div>
+</section>
+
+</div>
+
+<!-- ================== SOFTWARE / VALLEY ================== -->
+<div id="software-pane" class="split-pane">
+<section class="valley-page" id="valley" data-screen-label="04 Valley AI">
+  <div class="vly-wrap">
+
+    <!-- HERO -->
+    <div class="vly-hero">
+      <h2>Valley.<br/><span class="ital">A quantum brain</span> for autonomous warfare.</h2>
+      <p class="lede">Valley is the advanced quantum AI system solving interoperability and physical embodiment — a single command chain that lets manned and unmanned platforms across land, sea, space, and air communicate, reason, and act as one organism.</p>
+
+      <!-- stats removed -->
+
+    </div>
+
+    <!-- CROSS-DOMAIN MESH — C2 / COP DISPLAY -->
+    <div class="vly-mesh">
+      <div class="vly-mesh-head">
+        <div class="vly-mesh-title">One organism.<br/><em>Four domains.</em></div>
+        <div class="vly-mesh-domains">
+          <span><i>01</i>Land</span>
+          <span><i>02</i>Sea</span>
+          <span><i>03</i>Air</span>
+          <span><i>04</i>Space</span>
+        </div>
+      </div>
+      <div class="vly-mesh-stage">
+        <img class="vly-mesh-img" src="assets/valley/battlespace.jpg" alt="Cross-domain battlespace: drone, space, ground, aircraft, maritime nodes connected through the Valley mesh." />
+      </div>
+      <div class="vly-mesh-cap">
+        <span class="o">↳</span> Collaborative autonomy. Machine-to-machine coordination via natural-language protocol — every platform, every domain, one shared mind.
+      </div>
+    </div>
+
+    <!-- ============ USE CASES — DEFENSE / CIVIL ============ -->
+    <div class="vly-usecase">
+      <div class="vly-uc-head">
+        <span class="agh-eyebrow"><span class="agh-dot"></span>VALLEY · USE CASES</span>
+        <span class="agh-meta">02 SCENARIOS</span>
+      </div>
+
+      <div class="vly-uc-tabs" role="tablist">
+        <button type="button" class="vly-uc-tab active" data-uc="defense" role="tab" aria-selected="true">
+          <span class="vuc-num">01</span>
+          <span class="vuc-label">Defense</span>
+        </button>
+        <button type="button" class="vly-uc-tab" data-uc="civil" role="tab" aria-selected="false">
+          <span class="vuc-num">02</span>
+          <span class="vuc-label">Civil</span>
+        </button>
+      </div>
+
+      <div class="vly-uc-pane active" id="vly-uc-defense" role="tabpanel">
+        <div class="vuc-frame">
+          <span class="corner tl"></span><span class="corner tr"></span>
+          <span class="corner bl"></span><span class="corner br"></span>
+
+          <div class="vuc-scenario">
+            <span class="vuc-tag">SCENARIO · HIGH-VALUE THREAT NETWORK</span>
+            <h3>Multi-domain command for a lawful joint operation.</h3>
+          </div>
+
+          <div class="vuc-body">
+            <p>Valley connects widely used defense equipment such as <strong>MQ-9 Reaper</strong> ISR aircraft, <strong>RQ-20 Puma / RQ-11 Raven</strong> tactical drones, <strong>Black Hornet</strong> nano-drones, <strong>UH-60 Black Hawk / MH-60 Seahawk</strong> helicopters, <strong>Stryker / JLTV / MRAP</strong> vehicles, <strong>PackBot / TALON</strong> ground robots, patrol boats, radar feeds, EO/IR cameras, satellite imagery, SATCOM, and ATAK-style tactical maps into one command layer.</p>
+
+            <ul class="vuc-list">
+              <li>Instead of every asset running in a separate software system, Valley builds one live operational picture across air, land, sea, space, and ground teams.</li>
+              <li>A commander could give one instruction: <em>"Track the convoy, monitor the vessel, avoid civilian areas, and keep response units ready."</em></li>
+              <li>Valley would task the MQ-9 for wide-area surveillance, Puma/Raven for route monitoring, Black Hornet for close building reconnaissance, patrol boats for maritime tracking, PackBot/TALON for hazardous inspection, and helicopters or ground vehicles for human-authorized response.</li>
+              <li>The result is faster coordination, lower operator workload, better situational awareness, and a unified command chain for mixed manned and unmanned systems.</li>
+            </ul>
+
+            <p class="vuc-pullquote"><span class="o">↳</span> Valley would not replace the equipment. It would make the equipment act like one coordinated force instead of ten disconnected systems.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="vly-uc-pane" id="vly-uc-civil" role="tabpanel" hidden>
+        <div class="vuc-frame">
+          <span class="corner tl"></span><span class="corner tr"></span>
+          <span class="corner bl"></span><span class="corner br"></span>
+
+          <div class="vuc-scenario">
+            <span class="vuc-tag">SCENARIO · BURNING-BUILDING RESCUE</span>
+            <h3>Unified incident command for emergency response.</h3>
+          </div>
+
+          <div class="vuc-body">
+            <p>Valley connects common emergency-response equipment such as <strong>DJI Matrice 300/350 RTK</strong>, <strong>Skydio X10</strong>, thermal cameras, firefighter SCBA systems, helmet cameras, body-worn location tags, gas detectors, building CCTV, fire-panel data, ladder trucks, ambulances, police traffic units, utility shutoff systems, and indoor robots like <strong>PackBot / TALON</strong>.</p>
+
+            <ul class="vuc-list">
+              <li>In a burning-building rescue, Valley creates one live 3D map of smoke, heat, blocked routes, firefighter location, victim location, oxygen levels, and structural risk.</li>
+              <li>The incident commander could give one instruction: <em>"Find the trapped person and identify the safest extraction route."</em></li>
+              <li>Valley would send the thermal drone to scan windows and rooftops, direct an indoor robot through smoke-filled hallways, pull building floor plans and sensor data, guide firefighters to the safest stairwell, position the ladder truck, notify EMS, and coordinate police road clearance.</li>
+              <li>The result is faster victim location, safer firefighter entry, better multi-agency coordination, and a higher chance of saving lives in dangerous environments.</li>
+            </ul>
+
+            <p class="vuc-pullquote"><span class="o">↳</span> For civil missions, the value is not combat — it is faster search, safer firefighter entry, better multi-agency coordination, and a live 3D picture of a dangerous environment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</div>
+
+<!-- ================== FUTURE ROADMAP ================== -->
+<div id="roadmap-pane" class="split-pane">
+<section class="rm-page" data-screen-label="04 Roadmap">
+  <div class="rm-wrap">
+    <div class="rm-head">
+      <h1 class="display">
+        Future <span class="ital">Roadmap</span>.
+      </h1>
+      <p class="lede">
+        Next-generation Ankosha development — extending the platform from atmospheric persistence to stratospheric reach.
+      </p>
+    </div>
+
+    <div class="variants variants-roadmap">
+      <!-- ANKOSHA S — STRATOSPHERIC -->
+      <div class="variant">
+        <div class="v-head">
+          <div class="v-num">SYS · S</div>
+        </div>
+        <h3>Ankosha S.<br/><span class="ital">Stratospheric Variant</span></h3>
+
+        <div class="spec">
+          <div class="row">
+            <span class="k">Mission Tempo</span>
+            <span class="v">High-Altitude Persistence</span>
+          </div>
+          <div class="row">
+            <span class="k">Primary Role</span>
+            <span class="v">Stratospheric Long-Endurance Intelligence, Surveillance &amp; Reconnaissance, Low-Observable Glide &amp; Precision Mission Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PROJECT RUDRA — ORBITAL ============ -->
+    <div class="rudra">
+      <div class="rudra-grid">
+        <div class="rudra-img-pane">
+          <span class="ank-corner tl"></span><span class="ank-corner tr"></span>
+          <span class="ank-corner bl"></span><span class="ank-corner br"></span>
+          <img src="assets/rudra/rudra.png" alt="Project Rudra — orbital surveillance and inspection satellite" />
+        </div>
+
+        <div class="rudra-info-pane">
+          <div class="v-head">
+            <div class="v-num">SYS · R</div>
+            <div class="v-role">Space Domain</div>
+          </div>
+
+          <div class="rudra-eyebrow">Project · II</div>
+          <h3>Project Rudra.<br/><span class="ital">Orbital Surveillance Platform</span></h3>
+
+          <div class="spec">
+            <div class="row">
+              <span class="k">Mission Tempo</span>
+              <span class="v">Persistent Orbital Monitoring</span>
+            </div>
+            <div class="row">
+              <span class="k">Primary Role</span>
+              <span class="v">Space Situational Awareness, Satellite Inspection, Collision-Risk Prediction &amp; Debris Mapping</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<script>
+(function(){
+  const tabs = document.querySelectorAll('.split-tab');
+  const panes = {
+    hardware: document.getElementById('hardware-pane'),
+    software: document.getElementById('software-pane'),
+    roadmap:  document.getElementById('roadmap-pane')
+  };
+  tabs.forEach(t => t.addEventListener('click', () => {
+    tabs.forEach(x => { x.classList.remove('active'); x.setAttribute('aria-selected','false'); });
+    t.classList.add('active'); t.setAttribute('aria-selected','true');
+    Object.values(panes).forEach(p => p.classList.remove('active'));
+    panes[t.dataset.target].classList.add('active');
+    window.scrollTo({ top: document.querySelector('.split-page').offsetHeight - 20, behavior: 'smooth' });
+  }));
+
+  // Defense / Civil use-case tab switcher
+  const ucTabs  = document.querySelectorAll('.vly-uc-tab');
+  const ucPanes = {
+    defense: document.getElementById('vly-uc-defense'),
+    civil:   document.getElementById('vly-uc-civil')
+  };
+  ucTabs.forEach(t => t.addEventListener('click', () => {
+    const target = t.dataset.uc;
+    ucTabs.forEach(x => { x.classList.remove('active'); x.setAttribute('aria-selected','false'); });
+    t.classList.add('active'); t.setAttribute('aria-selected','true');
+    Object.entries(ucPanes).forEach(([key, pane]) => {
+      if (!pane) return;
+      if (key === target) { pane.hidden = false; pane.classList.add('active'); }
+      else                { pane.hidden = true;  pane.classList.remove('active'); }
+    });
+  }));
+})();
+</script>
+
+<!-- ================== FOOTER ================== -->
+<footer>
+  <div class="foot-grid">
+    <a href="index.html" class="foot-logo-link" aria-label="AVALONCH home">
+      <img src="assets/avalonch-logo-tight.png" alt="AVALONCH" />
+    </a>
+    <div class="foot-col">
+      <div class="foot-col-links">
+        <a href="index.html">Home</a>
+        <a href="Products.html">Products</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Parent Company of AMINUTEMAN TECHNOLOGIES</span>
+    <span class="o">SHAPING THE DETERRENCE</span>
+  </div>
+</footer>
+
+<script src="assets/transitions.js"></script>
+<script src="assets/enhancements.js?v=1"></script>
+<script src="assets/gallery.js?v=1"></script>
+<script src="assets/valley-tilt.js?v=1"></script>
+<script>
+  // live timestamp on COP display
+  (function(){
+    const el = document.getElementById('liveTs');
+    if (!el) return;
+    const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+    function pad(n){return String(n).padStart(2,'0');}
+    function tick(){
+      const d = new Date();
+      const t = pad(d.getUTCHours())+':'+pad(d.getUTCMinutes())+':'+pad(d.getUTCSeconds())+'Z';
+      const dt = pad(d.getUTCDate())+' '+months[d.getUTCMonth()]+' '+d.getUTCFullYear();
+      el.textContent = t + ' · ' + dt;
+    }
+    tick(); setInterval(tick, 1000);
+  })();
+</script>
+</body>
+</html>
