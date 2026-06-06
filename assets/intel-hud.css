@@ -1,0 +1,189 @@
+/* ============================================================
+   AVALONCH — Intelligence Briefing HUD
+   Defense-grade live stats panel docked beneath the hero
+   ============================================================ */
+
+.intel-hud {
+  margin-top: 56px;
+  padding: 0;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,138,0,0.03) 0%, rgba(0,0,0,0.4) 100%),
+    rgba(5,5,7,0.6);
+  backdrop-filter: blur(4px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Faint orange grid pattern across the whole HUD */
+.intel-hud::before {
+  content: ""; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,138,0,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,138,0,0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse at center, #000 50%, transparent 100%);
+}
+
+/* corner brackets — defense-tech standard */
+.intel-hud::after {
+  content: ""; position: absolute; pointer-events: none;
+  top: 8px; left: 8px; width: 14px; height: 14px;
+  border-top: 1px solid var(--orange);
+  border-left: 1px solid var(--orange);
+  box-shadow:
+    calc(100% + 14px - 14px - 16px) 0 0 0 transparent,
+    /* fake siblings via box-shadow not possible for borders — use separate decoration below */;
+}
+
+/* HEAD */
+.intel-hud-head {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 22px;
+  border-bottom: 1px solid var(--line);
+  position: relative; z-index: 1;
+}
+.ihh-left {
+  display: flex; align-items: center; gap: 12px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.28em;
+  color: var(--muted); text-transform: uppercase;
+}
+.ihh-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 10px var(--orange);
+  animation: ihhPulse 1.6s infinite;
+}
+@keyframes ihhPulse { 50% { opacity: 0.3; } }
+.ihh-title {
+  color: var(--orange); font-weight: 700;
+  letter-spacing: 0.32em;
+}
+.ihh-sep { color: rgba(255,138,0,0.4); }
+.ihh-date {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.ihh-right {
+  display: flex; align-items: center; gap: 10px;
+}
+.ihh-live {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.3em;
+  color: #ff3030; font-weight: 700;
+  padding: 4px 10px;
+  border: 1px solid rgba(255,48,48,0.4);
+  background: rgba(255,48,48,0.08);
+  position: relative;
+  animation: ihhLiveBlink 2.4s infinite;
+}
+@keyframes ihhLiveBlink {
+  0%, 100% { opacity: 1; }
+  85% { opacity: 0.45; }
+}
+
+/* GRID — 3 columns desktop, 2 mid, 1 mobile */
+.intel-hud-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  position: relative; z-index: 1;
+}
+
+/* SINGLE STAT TILE */
+.intel-stat {
+  padding: 22px 24px;
+  background: rgba(5,5,7,0.4);
+  position: relative;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: intelStatIn .55s cubic-bezier(.2,.7,.2,1) forwards;
+}
+.intel-stat[data-stat="0"] { animation-delay: 0.05s; }
+.intel-stat[data-stat="1"] { animation-delay: 0.15s; }
+.intel-stat[data-stat="2"] { animation-delay: 0.25s; }
+.intel-stat[data-stat="3"] { animation-delay: 0.35s; }
+.intel-stat[data-stat="4"] { animation-delay: 0.45s; }
+.intel-stat[data-stat="5"] { animation-delay: 0.55s; }
+@keyframes intelStatIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.is-key {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em;
+  color: var(--muted); text-transform: uppercase; font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.is-val {
+  display: flex; align-items: baseline; gap: 8px;
+  margin-bottom: 10px;
+}
+.is-num {
+  font-family: var(--display);
+  font-size: 36px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+.is-num-anim {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+.is-unit {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.24em;
+  color: var(--orange); font-weight: 700;
+  text-transform: uppercase;
+}
+
+.is-meta {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.is-delta {
+  font-weight: 700; padding-right: 4px;
+}
+.is-delta.up   { color: var(--orange); }
+.is-delta.down { color: #ff5050; }
+
+/* FOOT */
+.intel-hud-foot {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  padding: 12px 22px;
+  border-top: 1px solid var(--line);
+  background: rgba(0,0,0,0.3);
+  position: relative; z-index: 1;
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.24em;
+  color: var(--muted); text-transform: uppercase;
+}
+.ihf-label { color: var(--orange); font-weight: 700; }
+.ihf-sep   { color: rgba(255,255,255,0.15); }
+.ihf-source { color: var(--muted); }
+
+/* CORNER BRACKETS via overlay (simpler than the ::after gymnastics above) */
+.intel-hud > .ih-corner {
+  position: absolute; width: 14px; height: 14px;
+  border-color: var(--orange); border-style: solid;
+  pointer-events: none; z-index: 2;
+}
+.intel-hud > .ih-corner.tl { top: 8px; left: 8px;  border-width: 1px 0 0 1px; }
+.intel-hud > .ih-corner.tr { top: 8px; right: 8px; border-width: 1px 1px 0 0; }
+.intel-hud > .ih-corner.bl { bottom: 8px; left: 8px;  border-width: 0 0 1px 1px; }
+.intel-hud > .ih-corner.br { bottom: 8px; right: 8px; border-width: 0 1px 1px 0; }
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+  .intel-hud-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .intel-hud-grid { grid-template-columns: 1fr; }
+  .intel-hud-head { padding: 12px 16px; }
+  .intel-stat { padding: 18px 16px; }
+  .ihh-left { gap: 8px; flex-wrap: wrap; }
+  .is-num { font-size: 30px; }
+  .intel-hud-foot { padding: 10px 16px; font-size: 8px; gap: 6px; }
+}
